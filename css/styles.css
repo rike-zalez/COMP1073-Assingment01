@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+#nounBtn {
+    background-color: #a2f5a5; 
+}
+  
+#verbBtn {
+    background-color: #008CBA; 
+}
+  
+#adjectiveBtn {
+    background-color: #f44336; 
+}
+  
+#adverbBtn {
+    background-color: #FFD700; 
+}
+  
+#placeBtn {
+    background-color: #800080; 
+}
+  
+#viewStoryBtn {
+    background-color: #227025; 
+}
+  
+#randomStoryBtn {
+    background-color: #008CBA; 
+}
+  
+#resetBtn {
+    background-color: #f44336; 
+}
+
+
+#story {
+  margin-top: 50px;
+  font-size: 18px;
+}
