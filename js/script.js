@@ -20,3 +20,29 @@ document.getElementById('placeBtn').addEventListener('click', () => chooseWord('
 document.getElementById('viewStoryBtn').addEventListener('click', viewStory);
 document.getElementById('randomStoryBtn').addEventListener('click', generateRandomStory);
 document.getElementById('resetBtn').addEventListener('click', reset);
+
+function chooseWord(partOfSpeech) {
+  const words = eval(partOfSpeech + 's');
+  const index = Math.floor(Math.random() * words.length);
+  chosenWords[partOfSpeech] = words[index];
+  document.getElementById(partOfSpeech + 'Btn').innerText = words[index];
+}
+
+function viewStory() {
+  const { noun, verb, adjective, adverb, place } = chosenWords;
+  const story = `The ${adjective} ${noun} ${verb} ${adverb} to the ${place}.`;
+  document.getElementById('story').innerText = story;
+}
+
+function generateRandomStory() {
+  Object.keys(chosenWords).forEach(partOfSpeech => chooseWord(partOfSpeech));
+  viewStory();
+}
+
+function reset() {
+  Object.keys(chosenWords).forEach(partOfSpeech => {
+    chosenWords[partOfSpeech] = '';
+    document.getElementById(partOfSpeech + 'Btn').innerText = partOfSpeech.charAt(0).toUpperCase() + partOfSpeech.slice(1);
+  });
+  document.getElementById('story').innerText = '';
+}
